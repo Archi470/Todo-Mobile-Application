@@ -8,7 +8,7 @@
 
 *A sophisticated task management application built with React Native and Expo*
 
-[Features](#features) • [Screenshots](#screenshots) • [Architecture](#architecture) • [Installation](#installation) • [Configuration](#configuration) • [Usage](#usage) • [Authentication](#authentication) 
+[Features](#features) • [Technology_Stack](#technology_stack) • [Architecture](#architecture) • [Installation](#installation) • [Configuration](#configuration) • [Application Flow](#application_flow) 
 
 </div>
 
@@ -19,26 +19,13 @@
 This repository contains the mobile frontend for a full-stack Todo application. Built with React Native and Expo, it provides a seamless cross-platform experience for iOS, Android, and web. The application connects to a FastAPI backend through a robust REST API architecture, implementing industry-standard JWT authentication and modern state management patterns.
 
 ## Features
+🔐 Secure Auth: JWT-based authentication with protected routes and safe token storage using AsyncStorage.
 
-**Authentication & Security**
-- JWT-based authentication system
-- Secure token storage with AsyncStorage
-- Protected route navigation
+✅ Task Management: Full CRUD for todos with real-time updates and persistent sync.
 
-**Task Management**
-- Comprehensive CRUD operations for todos
-- Real-time status updates
-- Persistent data synchronization
+🎨 User Experience: Clean, modern UI with cross-platform support (iOS, Android, Web) and responsive toast errors.
 
-**User Experience**
-- Clean, modern interface design
-- Cross-platform compatibility (iOS, Android, Web)
-- Responsive error handling with toast notifications
-
-**Technical Highlights**
-- Context API for efficient state management
-- Axios interceptors for request/response handling
-- Environment-based configuration
+⚙️ Tech Stack: Context API for state, Axios interceptors for API handling, and environment-based configuration.
 
 ## Screenshots
 
@@ -48,14 +35,14 @@ This repository contains the mobile frontend for a full-stack Todo application. 
 |:---:|:---:|:---:|:---:|
 | <img src="./screenshots/login.png" alt="Login Interface" width="200"/> | <img src="./screenshots/signup.png" alt="Registration Interface" width="200"/> | <img src="./screenshots/dashboard.png" alt="Login Interface" width="200"/>  | <img src="./screenshots/profile.png" alt="Login Interface" width="200"/>  |
 
-</div>
-
 ### Cross-Platform Implementation
 <img src="./screenshots/web-view.png" alt="Web Interface" width="420"/>
 
 *Consistent experience across all platforms*
 
-## Technology Stack
+</div>
+
+## Technology_stack
 
 | Category | Technology |
 |----------|-----------|
@@ -178,33 +165,13 @@ npx expo start
 # The Metro bundler will display your network IP
 ```
 
-## Usage
-
-### Application Flow
+## Application_flow
 
 ```
 Authentication → Task Management → Profile Management
      ↓                 ↓                    ↓
   Login/Signup    Create/Update/Delete   View/Logout
 ```
-
-### Core Functionality
-
-**Task Creation**
-1. Authenticate with valid credentials
-2. Navigate to the dashboard
-3. Enter task description in the input field
-4. Submit to create a new task
-
-**Task Management**
-- **Complete Task**: Toggle the checkbox to mark as complete
-- **Delete Task**: Use the delete icon to remove tasks
-- **View Tasks**: Scroll through your organized task list
-
-**Profile Management**
-- Access user information through the profile screen
-- Manage account settings
-- Sign out securely
 
 ## API Integration
 
@@ -220,44 +187,6 @@ Authentication → Task Management → Profile Management
 | DELETE | `/todos/{id}` | Remove task | Required |
 | GET | `/me` | Retrieve user profile | Required |
 
-### Request Examples
-
-**Authentication Request:**
-```javascript
-POST /auth/login
-Content-Type: application/json
-
-{
-  "email": "user@example.com",
-  "password": "securePassword123"
-}
-```
-
-**Authentication Response:**
-```javascript
-{
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "token_type": "bearer"
-}
-```
-
-**Task Retrieval Request:**
-```javascript
-GET /todos
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-```
-
-**Task Retrieval Response:**
-```javascript
-[
-  {
-    "id": 1,
-    "title": "Complete project documentation",
-    "completed": false,
-    "created_at": "2024-01-15T10:30:00"
-  }
-]
-```
 
 ## Authentication
 

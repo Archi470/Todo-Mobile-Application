@@ -9,7 +9,7 @@
 
 *A robust REST API backend for task management built with FastAPI and modern Python practices*
 
-[Features](#features) • [Installation](#installation) • [API Documentation](#api-documentation) 
+[Features](#features) • [Technology_Stack](#technology_stack) • [Architecture](#architecture)  • [Installation](#installation) • [Configuration](#configuration) • [API Documentation](#api-documentation) 
 
 </div>
 
@@ -20,28 +20,15 @@
 This repository contains the backend API service for a full-stack Todo application. Built with FastAPI, it provides a high-performance, scalable REST API with comprehensive authentication, data validation, and database management. The service implements industry-standard security practices including JWT authentication, password hashing, and secure session management.
 
 ## Features
+🔐 Authentication & Security: JWT auth with bcrypt password hashing and secure CORS configuration.
 
-**Authentication & Security**
-- JWT-based authentication system with secure token generation
-- Password hashing using bcrypt algorithm
-- CORS configuration for cross-origin requests
+📦 Data Management: RESTful CRUD for todos with user-specific isolation and Pydantic validation.
 
-**Data Management**
-- RESTful CRUD operations for todo items
-- User-specific data isolation
-- Data validation with Pydantic models
+📘 API Architecture: Auto-generated Swagger UI with full OpenAPI schema and request/response validation.
 
-**API Architecture**
-- Automatic interactive API documentation (Swagger UI)
-- OpenAPI schema generation
-- Request/response validation
+⚡ Technical Stack: Async request handling with SQLAlchemy ORM and modular route structure.
 
-**Technical Highlights**
-- Asynchronous request handling
-- SQLAlchemy ORM integration
-- Modular route organization
-
-## Technology Stack
+## Technology_stack
 
 | Category | Technology |
 |----------|-----------|
@@ -91,7 +78,7 @@ backend/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/todo-app-backend.git
+git clone https://github.com/Archi470/Todo-Mobile-Application.git
 cd backend
 ```
 
