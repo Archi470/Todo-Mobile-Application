@@ -266,13 +266,4 @@ This project leverages the following technologies:
 - **Passlib** - Password hashing library
 - **PyJWT** - JSON Web Token implementation
 
-## Roadmap
-
-**Completed Features:**
--  JWT authentication system
--  User registration and management
--  Todo CRUD operations
--  Database relationship management
--  API documentation generation
-
 ---
