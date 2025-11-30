@@ -8,7 +8,7 @@
 
 *A sophisticated task management application built with React Native and Expo*
 
-[Features](#features) • [Screenshots](#screenshots) • [Architecture](#architecture) • [Installation](#installation) • [Configuration](#configuration) • [Usage](#usage) • [Authentication](#authentication) • [Troubleshooting](#troubleshooting) 
+[Features](#features) • [Screenshots](#screenshots) • [Architecture](#architecture) • [Installation](#installation) • [Configuration](#configuration) • [Usage](#usage) • [Authentication](#authentication) 
 
 </div>
 
@@ -118,8 +118,8 @@ frontend/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/todo-app-frontend.git
-cd todo-app-frontend
+git clone https://github.com/Archi470/Todo-Mobile-Application.git
+cd frontend
 ```
 
 2. **Install dependencies**
@@ -292,51 +292,3 @@ axios.interceptors.request.use(async (config) => {
 // Token removal
 await AsyncStorage.removeItem('userToken');
 ```
-
-## Troubleshooting
-
-### Network Connectivity Issues
-
-**Symptoms:** Connection failures, timeout errors, authentication problems
-
-**Resolution Steps:**
-1. Verify backend service is running at the configured URL
-2. Confirm correct API URL in `.env` file
-3. For Android Emulator, use `http://10.0.2.2:8000`
-4. For physical devices, ensure same WiFi network
-5. Temporarily disable firewall to isolate issues
-6. Restart Expo development server with cache cleared: `npx expo start -c`
-
-### Authentication Token Issues
-
-**Symptoms:** Unauthorized access errors, automatic logouts, null token values
-
-**Resolution Steps:**
-1. Clear AsyncStorage and re-authenticate
-2. Verify consistent token key usage throughout application
-3. Confirm JWT token format (should begin with `eyJ`)
-4. Validate backend token generation process
-
-### Application Startup Issues
-
-**Symptoms:** Crash on launch, Metro bundler failures, dependency errors
-
-**Resolution Steps:**
-1. Clear Expo cache: `npx expo start -c`
-2. Remove and reinstall dependencies:
-   ```bash
-   rm -rf node_modules package-lock.json
-   npm install
-   ```
-3. Check for port conflicts (default: 19000-19002)
-4. Update Expo CLI: `npm install -g expo-cli@latest`
-
-### Physical Device Connection Issues
-
-**Symptoms:** QR code scanning failures, connectivity problems
-
-**Resolution Steps:**
-1. Verify devices are on the same network
-2. Disable VPN services
-3. Use tunnel mode: `npx expo start --tunnel`
-4. Manually enter development server URL in Expo Go
