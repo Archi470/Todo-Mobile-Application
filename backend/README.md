@@ -182,8 +182,6 @@ DATABASE_URL=sqlite:///./todo.db
 
 ## API Documentation
 
-### Interactive Documentation
-
 Once the server is running, access the interactive API documentation:
 
 - **Swagger UI**: `http://localhost:8000/docs`
