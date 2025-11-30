@@ -6,24 +6,16 @@ import { Platform } from 'react-native';
 const getBaseURL = () => {
   // Web
   if (Platform.OS === 'web') {
-    if (typeof window !== 'undefined') {
-      const hostname = window.location.hostname;
-      if (hostname === 'localhost' || hostname === '127.0.0.1') {
-        return 'http://localhost:8000';
-      }
-      // For production web, use your deployed backend URL
-      return 'https://your-backend-url.com';
-    }
     return 'http://localhost:8000';
   }
 
   // Android emulator (dev)
-  if (Platform.OS === 'android' && __DEV__) {
+  if (Platform.OS === 'android') {
     return 'http://10.0.2.2:8000';
   }
 
   // iOS simulator or physical devices
-  return 'http://192.168.81.121:8000';
+  return 'http://192.168.216.148:8000';
 };
 
 const BASE_URL = getBaseURL();
@@ -42,7 +34,7 @@ const api = axios.create({
 api.interceptors.request.use(
   async (config) => {
     try {
-      // 🔥 IMPORTANT: use the SAME key as in AuthContext
+      //  IMPORTANT: use the SAME key as in AuthContext
       const token = await AsyncStorage.getItem('userToken');
       console.log('TOKEN IN INTERCEPTOR =>', token); // DEBUG
       if (token) {

@@ -1,0 +1,79 @@
+##############################
+# OS / EDITOR JUNK
+##############################
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+
+
+##############################
+# PYTHON / BACKEND
+##############################
+
+# Bytecode / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Build artifacts
+dist/
+build/
+*.egg
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Uvicorn / server PIDs
+*.pid
+
+
+##############################
+# NODE / FRONTEND (React Native / Expo)
+##############################
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Expo
+.expo/
+.expo-shared/
+web-build/
+
+# Metro / bundler cache
+.cache/
+.metro-cache/
+
+# Production / build outputs (web / mobile bundles)
+dist/
+build/
+
+
+##############################
+# ENVIRONMENT / SECRETS
+##############################
+
+frontend/.env
+backend/.env
